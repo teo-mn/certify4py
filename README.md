@@ -151,3 +151,26 @@ try:
 except Exception as e:
     print("Error: {}", e)  
 ```
+
+## HEMIS системээс ирэх өгөгдлийн бүтэц
+
+HEMIS системтэй тухайн их сургууль API эрх авч холболт хийх ба төгсөгчийн РД ээр тухайн төгсөгч төгсөх болзол хангасан
+эсэхийг лавлах ба дараах бүтэцтэй хариу ирнэ.
+
+```json
+{
+  "CONFER_YEAR_NAME": "2022-2023 хичээлийн жил",
+  "DEGREE_NUMBER": "{certId}",
+  "EDUCATION_FIELD_CODE": "051202",
+  "EDUCATION_FIELD_NAME": "Тест",
+  "EDUCATION_LEVEL_NAME": "бакалаврын боловсрол",
+  "FIRST_NAME": "Тест",
+  "INSTITUTION_ID": 1,
+  "INSTITUTION_NAME": "Тест Их Сургууль",
+  "LAST_NAME": "Тест",
+  "PRIMARY_IDENTIFIER_NUMBER": "aa99887766",
+  "TOTAL_GPA": 4
+}
+```
+
+Уг өгөгдлийг `pdf_issue` функцийн `meta_data` параметерт дамжуулна.
