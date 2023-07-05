@@ -1,6 +1,6 @@
 # Certify4py 
 Certify4py нь сертификат, диплом зэрэг цахим бичиг баримтыг блокчэйн дээр
-баталгаажуулж өгөх https://github.com/corex-mn/certify-sc ухаалаг гэрээтэй харьцдаг python хэлний сан юм.
+баталгаажуулж өгөх https://github.com/teo-mn/certify-sc ухаалаг гэрээтэй харьцдаг python хэлний сан юм.
 Уг ухаалаг гэрээ нь ИДС-ын дипломыг блокчэйнд баталгаажуулах стандарт бөгөөд дэлгэрэнгүйг дээрх линкээс харна уу.
 
 Ингэхдээ https://chainpoint.org/ ийн v2.0 стандартыг ашигласан.
@@ -53,7 +53,7 @@ PDF файлын хаш утгыг тооцож ухаалаг гэрээнд б
 from certify4py.UniversityDiplomaIssuer import UniversityDiplomaIssuer
 
 issuer = UniversityDiplomaIssuer(certify_contract_address,
-                  corexchain_node_url,
+                  node_host,
                   issuer_address,
                   issuer_name,
                   chain_id=3305)
@@ -116,7 +116,7 @@ except Exception as e:
 | Параметр                   | Тайлбар                                    | Заавал эсэх |
 |----------------------------|--------------------------------------------|-------------|
 | `certify_contract_address` | Ухаалаг гэрээний хаяг                      | тийм        |
-| `corexchain_node_url`      | Гүйлгээ хийх блокчэйний нөүдний хаяг       | тийм        |
+| `node_host`                | Гүйлгээ хийх блокчэйний нөүдний хаяг       | тийм        |
 | `issuer_address`           | Баталгаажуулагчийн хаяг                    | тийм        |
 | `issuer_name`              | Баталгаажуулагчийн нэр                     | үгүй        |
 | `chain_id`                 | Баталгаажуулагчийн нэр                     | үгүй        |
@@ -138,7 +138,7 @@ except Exception as e:
 from certify4py.UniversityDiplomaIssuer import PdfIssuer
 
 issuer = PdfIssuer(certify_contract_address,
-                  corexchain_node_url,
+                  node_host,
                   issuer_address,
                   issuer_name,
                   chain_id=3305)
